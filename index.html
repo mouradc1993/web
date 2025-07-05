@@ -3,88 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detroit Car Wash | Premium Car Cleaning Services</title>
+  <title>Luxury Detroit Car Wash | Premium Detailing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <div class="logo">Detroit Car Wash</div>
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Domain Sale Banner -->
+  <div class="domain-banner">
+    <div class="container">
+      <p>Premium Domain For Sale: <strong>detroitcarwash.com</strong> 
+        <span class="price">$2,000</span>
+        <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=detroitcarwash.com" class="buy-btn" target="_blank">
+          Buy Now <i class="fas fa-arrow-right"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="luxury-header">
+    <div class="container">
+      <div class="logo">
+        <span class="main-logo">DETROIT</span>
+        <span class="sub-logo">Signature Car Care</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+          <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+          <li><a href="#testimonials"><i class="fas fa-star"></i> Reviews</a></li>
+          <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Detroit's Finest Car Wash</h1>
-    <p>Bringing your vehicle back to showroom shine</p>
-    <a href="#contact" class="btn">Book Your Wash</a>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Exterior Wash</h3>
-        <p>High-pressure rinse, foam bath, and wax finish.</p>
-      </div>
-      <div class="card">
-        <h3>Interior Detailing</h3>
-        <p>Deep cleaning of seats, dashboard, and carpets.</p>
-      </div>
-      <div class="card">
-        <h3>Complete Detailing</h3>
-        <p>Interior + Exterior deluxe service with polish and scenting.</p>
-      </div>
-      <div class="card">
-        <h3>Engine Bay Cleaning</h3>
-        <p>Degreasing and cleaning under the hood.</p>
-      </div>
-      <div class="card">
-        <h3>Pet Hair Removal</h3>
-        <p>Special service to remove embedded pet fur from seats.</p>
-      </div>
-      <div class="card">
-        <h3>Odor Elimination</h3>
-        <p>Ozone and scent treatments to remove stubborn smells.</p>
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('images/hero-carwash.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Detroit's Premier<br>Luxury Car Care</h1>
+      <p>Where automotive excellence meets unparalleled attention to detail</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Book Concierge Service</a>
+        <a href="#services" class="btn btn-secondary">View Packages</a>
       </div>
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://source.unsplash.com/400x300/?carwash" alt="Car wash 1" />
-      <img src="https://source.unsplash.com/400x300/?car-cleaning" alt="Car wash 2" />
-      <img src="https://source.unsplash.com/400x300/?car-detailing" alt="Detailing" />
-      <img src="https://source.unsplash.com/400x300/?car-polish" alt="Polishing" />
-      <img src="https://source.unsplash.com/400x300/?engine-cleaning" alt="Engine Cleaning" />
-      <img src="https://source.unsplash.com/400x300/?vacuum-car" alt="Interior Cleaning" />
+  <!-- Services Section -->
+  <section id="services" class="section-padding">
+    <div class="container">
+      <h2>Our <span class="highlight">Services</span></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/exterior-detail.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-car-side"></i>
+            <h3>Signature Exterior</h3>
+            <p>Hand wash, clay bar treatment, and ceramic coating</p>
+            <span class="price">From $199</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/interior-clean.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-spa"></i>
+            <h3>Interior Revival</h3>
+            <p>Deep cleaning, leather conditioning, odor removal</p>
+            <span class="price">From $249</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/wheel-polish.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-gem"></i>
+            <h3>Wheel Perfection</h3>
+            <p>Rim cleaning, tire shine, brake dust removal</p>
+            <span class="price">From $99</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/engine-bay.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-cogs"></i>
+            <h3>Engine Bay Detail</h3>
+            <p>Degreasing, dressing, and shine for under the hood</p>
+            <span class="price">From $149</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions or ready to book? Reach out now.</p>
-    <div class="contact-info">
-      <p><strong>Phone:</strong> <a href="tel:+13135551234">+1 (313) 555-1234</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@detroitcarwash.com">info@detroitcarwash.com</a></p>
+  <!-- Gallery Section -->
+  <section id="gallery" class="section-padding">
+    <div class="container">
+      <h2>Our <span class="highlight">Work</span></h2>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Luxury detailing" loading="lazy" />
+        <img src="images/gallery2.jpg" alt="Hand polishing" loading="lazy" />
+        <img src="images/gallery3.jpg" alt="Interior cleaning" loading="lazy" />
+        <img src="images/gallery4.jpg" alt="Ceramic coating" loading="lazy" />
+      </div>
     </div>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
   </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding">
+    <div class="container">
+      <h2>Client <span class="highlight">Testimonials</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client1.jpg')"></div>
+          <div class="client-review">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"My Porsche has never looked better! Worth every penny."</p>
+            <span class="client-name">- Sarah J.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client2.jpg')"></div>
+          <div class="client-review">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"Professional, punctual, and pristine results every time."</p>
+            <span class="client-name">- Marcus L.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client3.jpg')"></div>
+          <div class="client-review">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"They treated my Bentley like royalty. Highly recommended."</p>
+            <span class="client-name">- Olivia R.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2>Book <span class="highlight">Appointment</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> <a href="tel:+13135551234">(313) 555-1234</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@detroitcarwash.com">info@detroitcarwash.com</a></p>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <select required>
+            <option value="">Select Service</option>
+            <option>Signature Exterior</option>
+            <option>Interior Revival</option>
+            <option>Wheel Perfection</option>
+            <option>Engine Bay Detail</option>
+          </select>
+          <textarea placeholder="Special Requests"></textarea>
+          <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Detroit Car Wash. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Detroit Signature Car Care. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-yelp"></i></a>
+      </div>
+    </div>
   </footer>
 
+  <!-- JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>

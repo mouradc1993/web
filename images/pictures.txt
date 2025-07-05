@@ -1,0 +1,14 @@
+
+Filename	Used In	Description
+hero-carwash.jpg	Hero section	A luxury car being hand-washed or detailed outdoors
+exterior-detail.jpg	Service card 1	Close-up of a car’s paint being polished or waxed
+interior-clean.jpg	Service card 2	Leather seats or dashboard being cleaned
+wheel-polish.jpg	Service card 3	Rims or tires being shined with detailing tools
+engine-bay.jpg	Service card 4	Engine bay being cleaned or dressed
+gallery1.jpg	Gallery image	Car covered in foam or being rinsed
+gallery2.jpg	Gallery image	Technician hand-polishing a hood
+gallery3.jpg	Gallery image	Interior dashboard detailing
+gallery4.jpg	Gallery image	Ceramic coating being applied
+client1.jpg	Testimonial 1	Portrait of a smiling woman (e.g. customer)
+client2.jpg	Testimonial 2	Portrait of a man in a car or near a vehicle
+client3.jpg	Testimonial 3	Portrait of a woman outdoors or near a luxury car
