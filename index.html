@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Detroit Car Wash | Premium Detailing</title>
+  <title>Detroit Car Wash | Best Detailing For All Vehicles</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
@@ -43,10 +43,10 @@
   <section class="hero" style="background-image: url('images/hero-carwash.jpg')">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Detroit's Premier<br>Luxury Car Care</h1>
+      <h1>Detroit’s Best Car Wash & Detailing for All Vehicles</h1>
       <p>Where automotive excellence meets unparalleled attention to detail</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn btn-primary">Book Concierge Service</a>
+        <a href="#contact" class="btn btn-primary">Send Inquiry</a>
         <a href="#services" class="btn btn-secondary">View Packages</a>
       </div>
     </div>
@@ -57,7 +57,42 @@
     <div class="container">
       <h2>Our <span class="highlight">Services</span></h2>
       <div class="services-grid">
-        <!-- Service cards go here -->
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/exterior-detail.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-car-side"></i>
+            <h3>Signature Exterior</h3>
+            <p>Hand wash, clay bar treatment, and ceramic coating</p>
+            <span class="price">From $20</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/interior-clean.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-spa"></i>
+            <h3>Interior Revival</h3>
+            <p>Deep cleaning, leather conditioning, odor removal</p>
+            <span class="price">From $20</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/wheel-polish.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-gem"></i>
+            <h3>Wheel Perfection</h3>
+            <p>Rim cleaning, tire shine, brake dust removal</p>
+            <span class="price">From $20</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-image" style="background-image: url('images/engine-bay.jpg')"></div>
+          <div class="card-content">
+            <i class="fas fa-cogs"></i>
+            <h3>Engine Bay Detail</h3>
+            <p>Degreasing, dressing, and shine for under the hood</p>
+            <span class="price">From $20</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -67,7 +102,10 @@
     <div class="container">
       <h2>Our <span class="highlight">Work</span></h2>
       <div class="gallery-grid">
-        <!-- Gallery images go here -->
+        <img src="images/gallery1.jpg" alt="Luxury detailing" loading="lazy" />
+        <img src="images/gallery2.jpg" alt="Hand polishing" loading="lazy" />
+        <img src="images/gallery3.jpg" alt="Interior cleaning" loading="lazy" />
+        <img src="images/gallery4.jpg" alt="Ceramic coating" loading="lazy" />
       </div>
     </div>
   </section>
@@ -77,7 +115,7 @@
     <div class="container">
       <h2>Client <span class="highlight">Testimonials</span></h2>
       <div class="testimonials-grid">
-        <!-- Testimonials go here -->
+        <!-- Testimonial cards -->
       </div>
     </div>
   </section>
@@ -85,7 +123,7 @@
   <!-- Contact Section -->
   <section id="contact" class="section-padding">
     <div class="container">
-      <h2>Book <span class="highlight">Appointment</span></h2>
+      <h2>Send <span class="highlight">Message</span></h2>
       <div class="contact-grid">
         <div class="contact-info">
           <p><i class="fas fa-phone"></i> <a href="tel:+13135551234">(313) 555-1234</a></p>
@@ -102,7 +140,7 @@
             <option>Engine Bay Detail</option>
           </select>
           <textarea name="message" placeholder="Special Requests"></textarea>
-          <button type="submit" class="btn btn-primary">Book Now</button>
+          <button type="submit" class="btn btn-primary">Send</button>
         </form>
       </div>
     </div>
@@ -120,7 +158,17 @@
     </div>
   </footer>
 
-  <!-- JavaScript File -->
-  <script src="script.js"></script>
+  <!-- JavaScript: Feedback on submit -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const button = form.querySelector('button');
+      button.textContent = 'Message Sent!';
+      button.style.backgroundColor = '#28a745';
+      button.disabled = true;
+      form.submit();
+    });
+  </script>
 </body>
 </html>
