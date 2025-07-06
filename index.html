@@ -97,25 +97,35 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="section-padding">
-    <div class="container">
-      <h2>Our <span class="highlight">Work</span></h2>
-      <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Luxury detailing" loading="lazy" />
-        <img src="images/gallery2.jpg" alt="Hand polishing" loading="lazy" />
-        <img src="images/gallery3.jpg" alt="Interior cleaning" loading="lazy" />
-        <img src="images/gallery4.jpg" alt="Ceramic coating" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
   <!-- Testimonials Section -->
   <section id="testimonials" class="section-padding">
     <div class="container">
       <h2>Client <span class="highlight">Testimonials</span></h2>
       <div class="testimonials-grid">
-        <!-- Testimonial cards -->
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client1.jpg')"></div>
+          <div class="client-review">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Absolutely outstanding service. My SUV looks brand new!"</p>
+            <span class="client-name">– Alex T.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client2.jpg')"></div>
+          <div class="client-review">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+            <p>"Very professional, excellent detailing. Highly recommend."</p>
+            <span class="client-name">– Jordan R.</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="client-img" style="background-image: url('images/client3.jpg')"></div>
+          <div class="client-review">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p>"Top-tier service! They took care of every little detail."</p>
+            <span class="client-name">– Rachel L.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -123,13 +133,17 @@
   <!-- Contact Section -->
   <section id="contact" class="section-padding">
     <div class="container">
-      <h2>Send <span class="highlight">Message</span></h2>
-      <div class="contact-grid">
+      <h2><span class="highlight">Contact</span> Us</h2>
+      <div class="contact-grid" style="align-items: start;">
         <div class="contact-info">
-          <p><i class="fas fa-phone"></i> <a href="tel:+13135551234">(313) 555-1234</a></p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:info@detroitcarwash.com">info@detroitcarwash.com</a></p>
+          <p><strong>Call Us</strong></p>
+          <p>Contact our award-winning support team</p>
+          <p>📞 040-67607600<br>🕘 Everyday 9:00 am - 7:00 pm</p>
+          <a href="https://api.whatsapp.com/send/?phone=914067607655&text&type=phone_number&app_absent=0" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
         </div>
-        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgvybpev" method="POST">
+        <form id="contactForm" class="contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <select name="service" required>
@@ -138,9 +152,11 @@
             <option>Interior Revival</option>
             <option>Wheel Perfection</option>
             <option>Engine Bay Detail</option>
+            <option>Other</option>
           </select>
           <textarea name="message" placeholder="Special Requests"></textarea>
           <button type="submit" class="btn btn-primary">Send</button>
+          <p id="formStatus" style="margin-top: 10px;"></p>
         </form>
       </div>
     </div>
@@ -150,24 +166,36 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Detroit Signature Car Care. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-yelp"></i></a>
-      </div>
     </div>
   </footer>
 
-  <!-- JavaScript: Feedback on submit -->
+  <!-- JS to handle form submission -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
       const form = e.target;
+      const formData = new FormData(form);
+      const status = document.getElementById('formStatus');
       const button = form.querySelector('button');
-      button.textContent = 'Message Sent!';
-      button.style.backgroundColor = '#28a745';
       button.disabled = true;
-      form.submit();
+
+      try {
+        const res = await fetch('https://formspree.io/f/mgvybpev', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          button.textContent = 'Message Sent!';
+          button.style.backgroundColor = '#28a745';
+          status.textContent = 'Thank you! Your message has been sent.';
+        } else {
+          status.textContent = 'Something went wrong. Please try again.';
+        }
+      } catch (error) {
+        status.textContent = 'Error connecting to server.';
+      }
     });
   </script>
 </body>
